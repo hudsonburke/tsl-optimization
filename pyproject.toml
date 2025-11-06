@@ -1,0 +1,11 @@
+[project]
+name = "tsl-optimization"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.3.4",
+    "pyopensim>=4.5.2.0",
+    "scipy>=1.16.3",
+]
