@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.optimize import minimize
 from scipy.interpolate import interp1d
-from opensim import Function
+from pyopensim.common import Function
 from typing import Iterable
 
 type CurveType = Function | np.ndarray

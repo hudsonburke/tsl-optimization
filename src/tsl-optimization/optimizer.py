@@ -58,9 +58,6 @@ def optimize_fiber_length(
     lb = np.full_like(lm0, lm_opt*lm_norm_range[0], dtype=float)
     ub = np.full_like(lm0, lm_opt*lm_norm_range[1], dtype=float)
     
-    # Minimization function
-    # func = lambda lm: objective(calc_tsl(lmt, lm, lm_opt, alpha_opt, afl, pfl, tfl))
-
     result = minimize(lambda lm: objective(calc_tsl(lmt, lm, lm_opt, alpha_opt, afl, pfl, tfl)), lm0, bounds=list(zip(lb, ub)), method=method)
     if not result.success:
         raise RuntimeError("Optimization failed")
