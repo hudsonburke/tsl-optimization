@@ -1,11 +1,23 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
-name = "tsl_optimization"
+name = "tsl-optimization"
 version = "0.1.0"
-description = "Add your description here"
+description = "Tendon slack length optimization utilities"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "numpy>=2.3.4",
-    "pyopensim>=4.5.2.0",
-    "scipy>=1.16.3",
+    "numpy>=1.26",
+    "scipy>=1.11",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
