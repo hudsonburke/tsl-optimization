@@ -13,6 +13,9 @@ dependencies = [
     "scipy>=1.11",
 ]
 
+[project.optional-dependencies]
+opensim = ["opensim>=4.6"]
+
 [dependency-groups]
 dev = [
     "pytest>=8",

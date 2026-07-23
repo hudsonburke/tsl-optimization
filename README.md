@@ -93,9 +93,10 @@ This means:
 
 - Create/update the environment: `uv sync --group dev`
 - Run the test suite: `uv run pytest -q`
+- Install with OpenSim support: `uv sync --group dev --extra opensim`
 
 ## Notes
 
 - NumPy workflows require only the declared `uv` dependencies.
-- OpenSim is optional, but OpenSim-backed curves require an installed runtime that provides `calcValue()`-compatible objects.
+- OpenSim is optional (`pip install tsl-optimization[opensim]` or `uv sync --extra opensim`). OpenSim-backed curves require an installed runtime that provides `calcValue()`-compatible objects. Note that `opensim` v4.6 wheels are available for Python 3.11–3.13 only.
 - The project uses a `src/` layout and is configured through `pyproject.toml`.
